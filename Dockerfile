@@ -9,10 +9,9 @@ ENV ANDROID_SDK_VERSION=24.3.4
 RUN cd /opt && curl -o android-sdk.tgz -L  dl.google.com/android/android-sdk_r$ANDROID_SDK_VERSION-linux.tgz
 
 RUN cd /opt && tar zxvf android-sdk.tgz && mv android-sdk-linux android-sdk && rm -f android-sdk.tgz \
-    && chmod -R +x android-sdk/tools/*
+    && chmod -R +x android-sdk/tools/* && chmod -R +x android-sdk/build-tools/*
 
-
-ENV ANDROID_HOME=/opt/android-sdk/android-sdk-linux
+ENV ANDROID_HOME=/opt/android-sdk
 
 ENV PATH="$PATH:/opt/android-sdk/tools:/opt/android-sdk/platform-tools"
 
