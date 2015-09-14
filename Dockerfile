@@ -16,8 +16,8 @@ ENV ANDROID_HOME=/opt/android-sdk/android-sdk-linux
 
 ENV PATH="$PATH:/opt/android-sdk/tools:/opt/android-sdk/platform-tools"
 
-RUN echo y | android update sdk --filter platform-tools,build-tools-19.0.3,sysimg-17,android-17,extra-android-support --no-ui --force
-RUN echo y | android update sdk --filter sysimg-19,android-19 --no-ui --force
-RUN echo y | android update sdk --filter sysimg-22,android-22 --no-ui --force
+RUN echo y | android update sdk --all --filter platform-tools,build-tools-19.1.0,sysimg-17,android-17,extra-android-support --no-ui --force
+RUN echo y | android update sdk --all --filter sysimg-19,android-19 --no-ui --force
+RUN echo y | android update sdk --all --filter sysimg-22,android-22 --no-ui --force
 
 USER app
