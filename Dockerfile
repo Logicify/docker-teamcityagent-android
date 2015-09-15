@@ -23,4 +23,6 @@ RUN echo y | android update sdk --all --filter sysimg-22,android-22 --no-ui --fo
 
 RUN cd /opt && chmod -R +x android-sdk/build-tools/*
 
+RUN yum install glibc.i686 zlib.i686 libstdc++.i686 ncurses-libs.i686 libgcc.i686
+
 USER app
