@@ -17,9 +17,9 @@ ENV ANDROID_HOME=/opt/android-sdk
 
 ENV PATH="$PATH:/opt/android-sdk/tools:/opt/android-sdk/platform-tools"
 
-RUN echo y | android update sdk --all --filter tools,platform-tools,build-tools-25.0.1,extra-android-support --no-ui --force
-RUN echo y | android update sdk --all --filter sysimg-21,android-21 --no-ui --force
-RUN echo y | android update sdk --all --filter sysimg-25,android-25 --no-ui --force
+RUN echo y | /opt/android-sdk/tools/android update sdk --all --filter tools,platform-tools,build-tools-25.0.1 --no-ui --force
+RUN echo y | /opt/android-sdk/tools/android update sdk --all --filter sysimg-21,android-21 --no-ui --force
+RUN echo y | /opt/android-sdk/tools/android update sdk --all --filter sysimg-25,android-25 --no-ui --force
 
 RUN cd /opt && chmod -R +x android-sdk/build-tools/*
 
