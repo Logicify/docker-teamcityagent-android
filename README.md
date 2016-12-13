@@ -6,5 +6,5 @@ Build tools version 25.0.1
 
 Installed images:
 
-* version 22
+* version 21
 * version 25
